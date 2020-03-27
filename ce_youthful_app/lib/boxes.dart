@@ -35,84 +35,92 @@ class Boxes extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    double _paddingSize = 11;
+    return Container(
+      child: ListView(
         children: <Widget>[
-          // top row
-          Row(
+          Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              Container(
-                height: 150.0,
-                width: 150.0,
-                decoration: _myBoxDecoration(Colors.blue),
-                child: Center(
-                  child: Text(
-                    "SUPER\nSUNDAY",
-                    style: _topRowTextStyle(30, Colors.white),
+              // top row
+              Padding(padding: EdgeInsets.all(_paddingSize),),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Container(
+                    height: 150.0,
+                    width: 150.0,
+                    decoration: _myBoxDecoration(Colors.blue),
+                    child: Center(
+                      child: Text(
+                        "SUPER\nSUNDAY",
+                        style: _topRowTextStyle(30, Colors.white),
+                      ),
+                    ),
                   ),
-                ),
+                  Container(
+                    height: 150.0,
+                    width: 150.0,
+                    decoration: _myBoxDecoration(Colors.indigo),
+                    child: Center(
+                      child: Text(
+                        'MIDWEEK',
+                        style: _topRowTextStyle(20, Colors.black),
+                      ),
+                    ),
+                  ),
+                ],
               ),
-              Container(
-                height: 150.0,
-                width: 150.0,
-                decoration: _myBoxDecoration(Colors.indigo),
-                child: Center(
-                  child: Text(
-                    'MIDWEEK',
-                    style: _topRowTextStyle(20, Colors.black),
+              Padding(padding: EdgeInsets.all(_paddingSize),),
+              // middle row
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Container(
+                    height: 200.0,
+                    width: 350.0,
+                    decoration: _myBoxDecoration(Colors.purple),
+                    child: Center(
+                      child: Text(
+                        'SWAG SERVICE',
+                        style: _middleRowTextStyle(),
+                      ),
+                    ),
                   ),
-                ),
+                ],
               ),
-            ],
-          ),
-          // middle row
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              Container(
-                height: 200.0,
-                width: 350.0,
-                decoration: _myBoxDecoration(Colors.purple),
-                child: Center(
-                  child: Text(
-                    'SWAG SERVICE',
-                    style: _middleRowTextStyle(),
+              // bottom row
+              Padding(padding: EdgeInsets.all(_paddingSize),),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Container(
+                    height: 150.0,
+                    width: 150.0,
+                    decoration: _myBoxDecoration(Colors.red),
+                    child: Center(
+                      child: Text(
+                        '#EVENTFLYER',
+                        style: _bottomRowTextStyle(),
+                      ),
+                    ),
                   ),
-                ),
-              ),
-            ],
-          ),
-          // bottom row
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              Container(
-                height: 150.0,
-                width: 150.0,
-                decoration: _myBoxDecoration(Colors.red),
-                child: Center(
-                  child: Text(
-                    '#EVENTFLYER',
-                    style: _bottomRowTextStyle(),
+                  Container(
+                    height: 150.0,
+                    width: 150.0,
+                    decoration: _myBoxDecoration(Colors.yellow),
+                    child: Center(
+                      child: Text(
+                        '#EVENTFLYER',
+                        style: _bottomRowTextStyle(),
+                      ),
+                    ),
                   ),
-                ),
-              ),
-              Container(
-                height: 150.0,
-                width: 150.0,
-                decoration: _myBoxDecoration(Colors.yellow),
-                child: Center(
-                  child: Text(
-                    '#EVENTFLYER',
-                    style: _bottomRowTextStyle(),
-                  ),
-                ),
+                ],
               ),
             ],
           ),
